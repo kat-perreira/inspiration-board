@@ -4,29 +4,61 @@ import emoji from 'emoji-dictionary';
 
 import './Card.css';
 
-class Card extends Component {
-  constructor() {
-    super();
+// class Card extends Component {
+//   constructor() {
+//     super();
+//
+//     this.state = {
+//       inspireQuote: "",
+//     };
+//   }
+//
+//   render() {
+//     console.log(emoji.unicode);
+//
+//
+//     return (
+//       <div className="card">
+//         { card }
+//       </div>
+//     )
+//   }
+// }
+//
+// Card.propTypes = {
+//
+// };
 
-    this.state = {
-      inspireQuote: "",
-    };
-  }
+// change this into a functional compnent
+const Card = (props) => {
+const { id, text, emoji } = props.card;
 
-  render() {
-    console.log(emoji.unicode);
+return (
+  <div className="card">
+    <ul>
+      <li>
+        {id}
+      </li>
+      <li>
+        {text}
+      </li>
+      <li>
+        {emoji}
+      </li>
 
 
-    return (
-      <div className="card">
-        { card }
-      </div>
-    )
-  }
+    </ul>
+
+
+
+
+
+  </div>
+
+
+)
+
+
 }
-
-Card.propTypes = {
-
-};
 
 export default Card;
