@@ -47,16 +47,9 @@ class Board extends Component {
 
     })
     return (
-      <div>
-        board
-        <ul >
-          <li>
+      <div className="board">
+
             { cardList }
-          </li>
-
-
-
-        </ul>
       </div>
     )
   }

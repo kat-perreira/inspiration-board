@@ -35,19 +35,15 @@ const { id, text, emoji } = props.card;
 
 return (
   <div className="card">
-    <ul>
-      <li>
-        {id}
-      </li>
-      <li>
+    <div className=".card__content-text">
         {text}
-      </li>
-      <li>
+      </div>
+      <div >
         {emoji}
-      </li>
+      </div>
 
 
-    </ul>
+
 
 
 
