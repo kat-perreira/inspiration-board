@@ -5,10 +5,21 @@ import emoji from 'emoji-dictionary';
 import './Card.css';
 
 class Card extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      inspireQuote: "",
+    };
+  }
+
   render() {
+    console.log(emoji.unicode);
+
+
     return (
       <div className="card">
-        Card
+        { card }
       </div>
     )
   }

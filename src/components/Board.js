@@ -19,7 +19,15 @@ class Board extends Component {
   render() {
     return (
       <div>
-        Board
+         board
+         <ul >
+           <li>
+             { this.cards }
+           </li>
+
+
+
+         </ul>
       </div>
     )
   }
