@@ -35,6 +35,26 @@ class Board extends Component {
     });
   }
 
+  deleteCard = (id) => {
+    console.log("trying to delete card data");
+    axios.delete(' https://inspiration-board.herokuapp.com/cards/:card_id', id)
+    // promise <3
+    .then((response) => {
+      console.log('You just deleted a card');
+      const updatedCardList = [ ...this.state.cards]
+      // update the card list to reflect the changes
+      this.setState({
+        cards: updatedCardList,
+      })
+    })
+    // if there are errors send out 50 bot messages on slack to Aurea of Wilfred
+    .catch((error) => {
+      this.setState({
+        error: error.message
+      });
+    });
+  }
+
   render() {
     const cardList = this.state.cards.map((card) => {
       const formattedCard = {
@@ -42,8 +62,11 @@ class Board extends Component {
         text: card["card"].text,
         emoji: card["card"].emoji,
       }
-      return <Card key={card.id}
-        card = {formattedCard} />
+      return <Card
+        key={card.id}
+        card = {formattedCard}
+        deleteCardCallback={ this.deleteCard }
+        />
 
     })
     return (

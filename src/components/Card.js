@@ -29,9 +29,11 @@ import './Card.css';
 //
 // };
 
-// change this into a functional compnent
+// change this into a functional component
 const Card = (props) => {
 const { id, text, emoji } = props.card;
+
+
 
 return (
   <div className="card">
@@ -42,12 +44,7 @@ return (
         {emoji}
       </div>
 
-
-
-
-
-
-
+      <button className=".card__delete"type="button">X</button>
 
   </div>
 
