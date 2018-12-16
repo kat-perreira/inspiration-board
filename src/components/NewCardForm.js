@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import emoji from 'emoji-dictionary';
 import './NewCardForm.css';
 
-const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog"]
+const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog", "sad_cat"]
 
 class NewCardForm extends Component{
   constructor(props) {
@@ -44,6 +44,7 @@ class NewCardForm extends Component{
   }
 
   render() {
+
     return (
       <form onSubmit={this.onSubmit} className="new-card-form">
 

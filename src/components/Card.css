@@ -45,3 +45,10 @@
   align-self: start;
   font-family: 'Permanent Marker', Helvetica, sans-serif;
 }
+
+.picture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

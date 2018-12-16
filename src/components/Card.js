@@ -16,26 +16,45 @@ class Card extends Component {
     }
   }
 
+
+
   render() {
+
+    const imageObject = [
+      "https://dingo.care2.com/pictures/causes/3147/3146752.large.jpg",
+      "http://www.bandofcats.com/wp-content/uploads/2011/06/cat-motivational-poster_47.jpg",
+      "http://www.bandofcats.com/wp-content/uploads/2011/06/cat-motivational-poster_52.jpg",
+      "https://pbs.twimg.com/profile_images/612360484155695104/4ZTgU059_400x400.jpg"
+    ]
+
+    const randomInspiration = imageObject[Math.floor(Math.random() * imageObject.length)];
+
+    const currentEmoji = this.state.emoji
 
     return (
       <div className="card">
+        <section className="card__content">
 
-        <h2>
-          {this.state.text}
-        </h2>
+          <div className="picture">
+            <img src={randomInspiration}></img>
+          </div>
 
-        <div>
-          {this.state.emoji}
-        </div>
+          <p className="card__content-text">
+            {this.state.text}
+          </p>
 
-        <button className="card__delete"
-          onClick={() => this.props.deleteCardCallback(this.state.id)}
-          type="button"
-          aria-label="Remove"
-          >
-          X
-        </button>
+          <p className="card__content-emoji">
+            {currentEmoji}
+          </p>
+
+          <button
+            className="card__delete"
+            onClick={() => this.props.deleteCardCallback(this.state.id)}
+            type="button"
+            aria-label="X"
+            >X
+          </button>
+        </section>
 
       </div>
     )
@@ -51,29 +70,4 @@ Card.propTypes = {
 
 };
 
-// change this into a functional component
-// const Card = (props) => {
-// const { id, text, emoji } = props.card;
-//
-//
-//
-// return (
-//   <div className="card">
-//     <div className=".card__content-text">
-//         {text}
-//       </div>
-//       <div >
-//         {emoji}
-//       </div>
-//
-//       <button onClick={() => props.deleteCardCallback(props.id)} className=".card__delete"type="button">X</button>
-//
-//   </div>
-//
-//
-// )
-//
-//
-// }
-//
 export default Card;``
