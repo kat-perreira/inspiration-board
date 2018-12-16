@@ -12,7 +12,6 @@ class Card extends Component {
       id: this.props.id,
       text: this.props.text,
       emoji: this.props.emoji,
-      image: this.props.img,
     }
   }
 
@@ -35,7 +34,7 @@ class Card extends Component {
       <div className="card">
         <section className="card__content">
 
-          <div className="picture">
+          <div className="cat">
             <img src={randomInspiration}></img>
           </div>
 
@@ -51,8 +50,8 @@ class Card extends Component {
             className="card__delete"
             onClick={() => this.props.deleteCardCallback(this.state.id)}
             type="button"
-            aria-label="X"
-            >X
+            aria-label="Delete"
+            >Delete
           </button>
         </section>
 
