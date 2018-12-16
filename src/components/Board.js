@@ -75,6 +75,7 @@ class Board extends Component {
         text={card.text}
         emoji={emoji.getUnicode(`${card.emoji}`)}
         deleteCardCallback={ this.deleteCard }
+        image={card.img}
         />
     });
 

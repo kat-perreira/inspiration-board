@@ -12,6 +12,7 @@ class Card extends Component {
       id: this.props.id,
       text: this.props.text,
       emoji: this.props.emoji,
+      image: this.props.img,
     }
   }
 
@@ -20,20 +21,20 @@ class Card extends Component {
     return (
       <div className="card">
 
-        <div className="card__content-text">
+        <h2>
           {this.state.text}
-        </div>
+        </h2>
 
-        <div className=".card__content-emoji">
+        <div>
           {this.state.emoji}
         </div>
 
-        <button className=""
+        <button className="card__delete"
           onClick={() => this.props.deleteCardCallback(this.state.id)}
           type="button"
           aria-label="Remove"
           >
-          Delete
+          X
         </button>
 
       </div>
@@ -46,6 +47,7 @@ Card.propTypes = {
   text: PropTypes.string,
   emoji: PropTypes.string,
   deleteCardCallback: PropTypes.func,
+  img: PropTypes.string,
 
 };
 
