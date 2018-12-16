@@ -35,6 +35,7 @@ class Board extends Component {
     });
   }
 
+// delete card function
   deleteCard = (id) => {
     const DELETE_THIS_CARD = `https://inspiration-board.herokuapp.com/cards/${id}`
 
@@ -62,12 +63,39 @@ class Board extends Component {
     });
   }
 
+  // add card function
+  addCard = (cardData) => {
+    console.log("gonna add a new card to the inspiration board...");
+    console.log(cardData, "cardData");
+    const ADD_CARD = `https://inspiration-board.herokuapp.com/boards/kat/cards?text=${cardData.text}&emoji=${cardData.emoji}`
+
+    axios.post(ADD_CARD)
+    // promise <3
+    .then((response) => {
+      console.log("adding card...");
+      // updated card list with the new card added set to const
+      // const updatedNewCardList = [ ...this.state.cards, cardData]
+      let updatedNewCardList = this.state.cards
+      updatedNewCardList.push(response.data)
+
+      this.setState({
+        cards: updatedNewCardList,
+      })
+    })
+    // if error, inspiration disappears and the world turns dark and cold
+    .catch((error) => {
+      this.setState({
+        error: error.message
+      });
+    });
+  }
+
   render() {
     const emoji = require("emoji-dictionary");
 
     let cardList = this.state.cards;
 
-    const list = cardList.map((card, i) => {
+    const list = cardList.map((card) => {
       card = card.card;
       return <Card
         key={card.id}
@@ -75,15 +103,23 @@ class Board extends Component {
         text={card.text}
         emoji={emoji.getUnicode(`${card.emoji}`)}
         deleteCardCallback={ this.deleteCard }
-        image={card.img}
+
         />
     });
-
 
     return (
       <div className="board">
         { list }
+
+
+            <NewCardForm
+              addCardCallback={ this.addCard }
+              />
+
+
+
       </div>
+
     )
   }
 
