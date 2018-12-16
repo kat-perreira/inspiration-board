@@ -36,13 +36,20 @@ class Board extends Component {
   }
 
   deleteCard = (id) => {
+    const DELETE_THIS_CARD = `https://inspiration-board.herokuapp.com/cards/${id}`
+
     console.log("trying to delete card data");
-    axios.delete(' https://inspiration-board.herokuapp.com/cards/:card_id', id)
+    axios.delete(DELETE_THIS_CARD)
     // promise <3
-    .then((response) => {
+    .then(() => {
       console.log('You just deleted a card');
-      const updatedCardList = [ ...this.state.cards]
+      // this filters stuff into updated card list without the id
+      const updatedCardList = this.state.cards.filter((card) => {
+        return card.card.id !== id
+      })
+      console.log(updatedCardList);
       // update the card list to reflect the changes
+      // find index,findIndex, splice it out, then set the state
       this.setState({
         cards: updatedCardList,
       })
@@ -56,23 +63,25 @@ class Board extends Component {
   }
 
   render() {
-    const cardList = this.state.cards.map((card) => {
-      const formattedCard = {
-        id: card["card"].id,
-        text: card["card"].text,
-        emoji: card["card"].emoji,
-      }
+    const emoji = require("emoji-dictionary");
+
+    let cardList = this.state.cards;
+
+    const list = cardList.map((card, i) => {
+      card = card.card;
       return <Card
         key={card.id}
-        card = {formattedCard}
+        id={card.id}
+        text={card.text}
+        emoji={emoji.getUnicode(`${card.emoji}`)}
         deleteCardCallback={ this.deleteCard }
         />
+    });
 
-    })
+
     return (
       <div className="board">
-
-            { cardList }
+        { list }
       </div>
     )
   }
