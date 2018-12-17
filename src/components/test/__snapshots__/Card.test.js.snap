@@ -11,7 +11,7 @@ exports[`Card renders without crashing even with no text or emoji data 1`] = `
       className="card__pic"
     >
       <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR59xqLYNFvQDBh8dq_jnNxUHtEJz-YzHo6ZvBuKowwu-7s-H9j7A"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5tLY_SnBx4SaOCp_JOJMfDHY3ynnhqVJhmTZhroOjUkAm88T7KA"
       />
     </div>
     <p

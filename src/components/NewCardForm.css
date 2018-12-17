@@ -4,6 +4,8 @@
   width: 50%;
   margin: auto;
   padding-bottom: 4rem;
+  border: 5px solid black;
+  justify-content: space-around;
 }
 
 .new-card-form__header {
@@ -14,9 +16,9 @@
 .new-card-form__form {
   font-size: 1.5em;
   display: grid;
-  grid-template-columns: [labels] auto [controls] 1fr;
+  grid-template-columns: [labels] auto [controls] 3fr;
   grid-auto-flow: row;
-  grid-gap: .8em;
+  grid-gap: .11em;
 }
 
 .new-card-form__form-label  {
@@ -35,6 +37,6 @@
 
 .new-card-form__form-button {
   background-color: inherit;
-  border: 1px solid black;
+  border: 1px solid #222222;
   font-size: 1em;
 }

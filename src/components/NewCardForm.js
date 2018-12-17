@@ -65,7 +65,6 @@ class NewCardForm extends Component{
 
       <div className="new-card-form">
         <form onSubmit={this.onSubmit} className="new-card-form__form">
-
           <section className="new-card-form__header" >
             <h1>Add Some Inspiration</h1>
           </section>
@@ -89,7 +88,7 @@ class NewCardForm extends Component{
           <div>
             <label
               className="new-card-form__form-label"
-              htmlFor="Emoji">emoji  
+              htmlFor="Emoji">Emoji
             </label>
 
             <select

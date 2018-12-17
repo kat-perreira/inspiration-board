@@ -33,7 +33,7 @@ exports[`NewCardForm that it renders when passed an empty function 1`] = `
         className="new-card-form__form-label"
         htmlFor="Emoji"
       >
-        emoji
+        Emoji
       </label>
       <select
         id="emoji"
