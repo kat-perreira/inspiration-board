@@ -1,11 +1,11 @@
 .card {
-  background-color: #C39BD3;
+  background-color: #ECF0F1;
 
 
   margin: 0.4rem;
 
-  min-height: 250px;
-  min-width: 225px;
+  min-height: 200px;
+  min-width: 175px;
   flex-basis: 40%;
 
   border-radius: 2px;
@@ -14,7 +14,6 @@
   grid-template-columns: 1fr 10fr 1fr;
   align-items: center;
 }
-
 .card__content {
   grid-column-start: 2;
 
@@ -46,7 +45,7 @@
   font-family: 'Permanent Marker', Helvetica, sans-serif;
 }
 
-.cat {
-  max-width: 100%;
-  height: auto;
+.cat.resize {
+  width:540px; /* you can use % */
+   height: auto;
 }

@@ -110,8 +110,6 @@ class Board extends Component {
     return (
       <div className="board">
         { list }
-
-
             <NewCardForm
               addCardCallback={ this.addCard }
               />
