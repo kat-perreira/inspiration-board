@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
+  background: grey;
 }
 
 .validation-errors-display {

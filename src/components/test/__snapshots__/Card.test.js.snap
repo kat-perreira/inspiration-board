@@ -7,13 +7,10 @@ exports[`Card renders without crashing even with no text or emoji data 1`] = `
   <section
     className="card__content"
   >
-    <div
-      className="cat"
-    >
-      <img
-        src="https://pbs.twimg.com/profile_images/612360484155695104/4ZTgU059_400x400.jpg"
-      />
-    </div>
+    <img
+      className="card__pic"
+      src="https://farm5.staticflickr.com/4810/44529846610_bc64036550_b.jpg"
+    />
     <p
       className="card__content-text"
     />
@@ -39,13 +36,10 @@ exports[`Card that it matches an existing snapshot 1`] = `
   <section
     className="card__content"
   >
-    <div
-      className="cat"
-    >
-      <img
-        src="https://dingo.care2.com/pictures/causes/3147/3146752.large.jpg"
-      />
-    </div>
+    <img
+      className="card__pic"
+      src="https://farm5.staticflickr.com/4810/44529846610_bc64036550_b.jpg"
+    />
     <p
       className="card__content-text"
     >

@@ -1,11 +1,11 @@
 .card {
-  background-color: #ECF0F1;
+  background: black;
 
 
   margin: 0.4rem;
 
-  min-height: 200px;
-  min-width: 175px;
+  min-height: 100px;
+  min-width: 100px;
   flex-basis: 40%;
 
   border-radius: 2px;
@@ -45,7 +45,10 @@
   font-family: 'Permanent Marker', Helvetica, sans-serif;
 }
 
-.cat.resize {
-  width:540px; /* you can use % */
-   height: auto;
+.card__pic.resize {
+    width: 50px; /* you can use % */
+    height: auto;
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
 }
