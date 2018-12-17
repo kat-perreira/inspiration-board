@@ -20,13 +20,14 @@ class Card extends Component {
   render() {
 
     const imageObject = [
-      "https://farm5.staticflickr.com/4841/44529846770_73db91cdb5_b.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5tLY_SnBx4SaOCp_JOJMfDHY3ynnhqVJhmTZhroOjUkAm88T7KA",
 
-      "https://farm5.staticflickr.com/4810/44529846610_bc64036550_b.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6QHfAIsVpci-gQc1Mi95J7M-xUyULCEM_K9p3MZYrCyABb_kaiQ",
 
-      "https://farm5.staticflickr.com/4833/31407455247_1f0c53152e_b.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWZhM3qZxbGG4jyCfpADnm9YM2A5lK4fbNys5M9hGWR8AEGRIH",
 
-      "https://farm5.staticflickr.com/4873/45434420345_7ede9010cd_b.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjEeszCkeEQaSpfejE3MpuLBOeqb5QeiYeyp-lZeIcNIaBaTiQoQ",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR59xqLYNFvQDBh8dq_jnNxUHtEJz-YzHo6ZvBuKowwu-7s-H9j7A",
     ]
 
     const randomInspiration = imageObject[Math.floor(Math.random() * imageObject.length)];
@@ -37,8 +38,12 @@ class Card extends Component {
       <div className="card">
         <section className="card__content">
 
+          <div className="card__pic">
+            <img  src={randomInspiration}></img>
+            </div>
 
-            <img className="card__pic" src={randomInspiration}></img>
+
+            
 
 
           <p className="card__content-text">

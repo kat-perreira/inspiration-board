@@ -1,5 +1,5 @@
 .card {
-  background: black;
+  background: #E5E8E8;
 
 
   margin: 0.4rem;
@@ -11,8 +11,9 @@
   border-radius: 2px;
 
   display: grid;
-  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   align-items: center;
+  justify-content: center;
 }
 .card__content {
   grid-column-start: 2;
@@ -45,10 +46,12 @@
   font-family: 'Permanent Marker', Helvetica, sans-serif;
 }
 
-.card__pic.resize {
-    width: 50px; /* you can use % */
-    height: auto;
-    max-width: 100%;
-    height: auto;
-    width: auto\9;
+.card__pic {
+  height: 300px; width: 300px; overflow: hidden;
+  align-items: center;
+}
+
+.card__pic img {
+  border-radius: 25px;
+  justify-content: center;
 }
